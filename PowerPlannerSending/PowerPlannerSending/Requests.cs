@@ -886,6 +886,8 @@ namespace PowerPlannerSending
     [DataContract]
     public class ChangePasswordResponse : PlainResponse
     {
+        [DataMember]
+        public string Session { get; set; }
     }
 
     /// <summary>
