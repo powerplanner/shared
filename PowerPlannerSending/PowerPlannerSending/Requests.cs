@@ -71,6 +71,8 @@ namespace PowerPlannerSending
         public long AccountId;
         [DataMember]
         public int DeviceId;
+        [DataMember]
+        public string Session;
     }
 
     [DataContract]
