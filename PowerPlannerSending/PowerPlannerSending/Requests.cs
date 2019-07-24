@@ -923,7 +923,11 @@ namespace PowerPlannerSending
     }
 
     [DataContract]
-    public class CheckPasswordResponse : PlainResponse { }
+    public class CheckPasswordResponse : PlainResponse
+    {
+        [DataMember]
+        public string Session;
+    }
 
     [DataContract]
     public class ChangeUsernameRequest : PartialLoginRequest
