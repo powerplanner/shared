@@ -1,0 +1,18 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <MSBuildAllProjects>$(MSBuildAllProjects);$(MSBuildThisFileFullPath)</MSBuildAllProjects>
+    <HasSharedItems>true</HasSharedItems>
+    <SharedGUID>15987d33-e86c-4880-a9e3-86d326f58b95</SharedGUID>
+  </PropertyGroup>
+  <PropertyGroup Label="Configuration">
+    <Import_RootNamespace>PowerPlannerSending</Import_RootNamespace>
+  </PropertyGroup>
+  <ItemGroup>
+    <Compile Include="$(MSBuildThisFileDirectory)GpaOptions.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Items.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Requests.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Transfer\TransferRequest.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)WebRequests.cs" />
+  </ItemGroup>
+</Project>
