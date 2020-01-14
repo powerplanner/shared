@@ -935,22 +935,6 @@ namespace PowerPlannerSending
     public class ChangeUsernameRequest : PartialLoginRequest
     {
         [DataMember]
-        public LoginCredentials OldLogin;
-
-
-        public override LoginCredentials Login
-        {
-            get
-            {
-                return OldLogin;
-            }
-            set
-            {
-                //nothing
-            }
-        }
-
-        [DataMember]
         public string NewUsername;
     }
 
