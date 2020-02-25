@@ -56,6 +56,19 @@ namespace PowerPlannerSending
         public string ClassColor;
     }
 
+    [DataContract]
+    public class GetFullMegaItemResponse : PlainResponse
+    {
+        [DataMember]
+        public Guid Identifier;
+
+        [DataMember]
+        public string Details;
+
+        [DataMember]
+        public string[] ImageNames;
+    }
+
 
     [DataContract]
     public class GetExamResponse : PlainResponse
