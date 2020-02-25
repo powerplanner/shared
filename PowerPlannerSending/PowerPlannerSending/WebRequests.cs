@@ -225,6 +225,34 @@ namespace PowerPlannerSending
     }
 
     [DataContract]
+    public class ListItemMegaItem
+    {
+        [DataMember]
+        public Guid Identifier;
+
+        [DataMember]
+        public DateTime DateCreated;
+
+        [DataMember]
+        public string Name;
+
+        [DataMember]
+        public string ShortDetails;
+
+        [DataMember]
+        public DateTime Date;
+
+        [DataMember]
+        public Guid UpperIdentifier;
+
+        [DataMember]
+        public MegaItemType MegaItemType;
+
+        [DataMember]
+        public double PercentComplete;
+    }
+
+    [DataContract]
     public class ListItemHomeworkInfo : ListItemExamInfo
     {
         [DataMember]
@@ -415,6 +443,22 @@ namespace PowerPlannerSending
 
         [DataMember]
         public IEnumerable<BasicClassInfoWithSchedules> Classes { get; set; }
+    }
+
+    [DataContract]
+    public class GetClassesScheduleAndMegaItemsResponse : PlainResponse
+    {
+        [DataMember]
+        public DateTime WeekOneStartsOn;
+
+        [DataMember]
+        public IEnumerable<BasicClassInfo> Classes { get; set; }
+
+        [DataMember]
+        public IEnumerable<BasicScheduleInfo> Schedules { get; set; }
+
+        [DataMember]
+        public IEnumerable<ListItemMegaItem> MegaItems { get; set; }
     }
 
 
