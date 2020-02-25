@@ -243,6 +243,9 @@ namespace PowerPlannerSending
         public DateTime Date;
 
         [DataMember]
+        public DateTime EndTime;
+
+        [DataMember]
         public Guid UpperIdentifier;
 
         [DataMember]
