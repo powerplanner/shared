@@ -69,6 +69,19 @@ namespace PowerPlannerSending
         public string[] ImageNames;
     }
 
+    [DataContract]
+    public class GetFullClassResponse : PlainResponse
+    {
+        [DataMember]
+        public Guid Identifier;
+
+        [DataMember]
+        public string Details;
+
+        [DataMember]
+        public string[] ImageNames;
+    }
+
 
     [DataContract]
     public class GetExamResponse : PlainResponse
