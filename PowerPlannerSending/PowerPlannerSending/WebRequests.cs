@@ -322,10 +322,8 @@ namespace PowerPlannerSending
         [DataMember]
         public Guid Identifier;
 
-        /// <summary>
-        /// Not sent down
-        /// </summary>
-        public Guid ClassIdentifier;
+        [DataMember]
+        public Guid UpperIdentifier;
 
         [DataMember]
         public string Room;
