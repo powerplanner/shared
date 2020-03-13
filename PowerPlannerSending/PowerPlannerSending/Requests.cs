@@ -769,7 +769,7 @@ namespace PowerPlannerSending
         /// Added on 3/12/2020, IANA time format. If null then ignored/not set.
         /// </summary>
         [DataMember]
-        public string HomeTimeZone;
+        public string SchoolTimeZone;
     }
 
     [DataContract]
