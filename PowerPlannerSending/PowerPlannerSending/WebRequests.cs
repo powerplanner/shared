@@ -479,6 +479,9 @@ namespace PowerPlannerSending
         public DateTime WeekOneStartsOn;
 
         [DataMember]
+        public DateTime PremiumAccountExpiresOn { get; set; }
+
+        [DataMember]
         public IEnumerable<BasicClassInfo> Classes { get; set; }
 
         [DataMember]
