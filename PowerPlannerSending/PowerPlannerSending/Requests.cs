@@ -950,6 +950,16 @@ namespace PowerPlannerSending
     }
 
     [DataContract]
+    public class UndeleteItemRequest : PartialLoginRequest
+    {
+        /// <summary>
+        /// The identifier of the item to undelete
+        /// </summary>
+        [DataMember]
+        public Guid Identifier;
+    }
+
+    [DataContract]
     public class UpgradeAccountInfo
     {
         [DataMember]
