@@ -3,9 +3,6 @@
     <TargetFramework>netstandard2.0</TargetFramework>
   </PropertyGroup>
   <ItemGroup>
-    <Folder Include="Properties\" />
-  </ItemGroup>
-  <ItemGroup>
     <ProjectReference Include="..\..\..\portablelibraries\ToolsPortable\ToolsPortable\ToolsPortable.csproj" />
   </ItemGroup>
 
