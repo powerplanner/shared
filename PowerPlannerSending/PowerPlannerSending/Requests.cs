@@ -706,6 +706,12 @@ namespace PowerPlannerSending
         public string Page;
 
         /// <summary>
+        /// Client specifies this, and if online account is different, server returns the new grade scale
+        /// </summary>
+        [DataMember]
+        public long? CurrentDefaultGradeScaleIndex;
+
+        /// <summary>
         /// Adds the offset to updated and deleted items.
         /// </summary>
         /// <param name="offset">Offset from actual time, in milliseconds.</param>
@@ -738,7 +744,11 @@ namespace PowerPlannerSending
     [DataContract]
     public class SyncSettingsResponse : PlainResponse
     {
-
+        /// <summary>
+        /// Device should save this number and then send it up with next normal syncs.
+        /// </summary>
+        [DataMember]
+        public long DefaultGradeScaleIndex;
     }
 
     /// <summary>
@@ -770,6 +780,24 @@ namespace PowerPlannerSending
         /// </summary>
         [DataMember]
         public string SchoolTimeZone;
+
+        /// <summary>
+        /// Added on 4/28/2021. If null, then ignored/not set.
+        /// </summary>
+        [DataMember]
+        public GradeScale[] DefaultGradeScale;
+
+        /// <summary>
+        /// Added on 4/28/2021. If null, then ignored/not set.
+        /// </summary>
+        [DataMember]
+        public bool? DefaultDoesRoundGradesUp;
+
+        /// <summary>
+        /// Added on 4/28/2021. If null, then ignored/not set.
+        /// </summary>
+        [DataMember]
+        public bool? DefaultDoesAverageGradeTotals;
     }
 
     [DataContract]
@@ -790,6 +818,12 @@ namespace PowerPlannerSending
         /// </summary>
         [DataMember]
         public int ChangeNumber;
+
+        /// <summary>
+        /// Server only returns this if default grade scale has changed.
+        /// </summary>
+        [DataMember]
+        public long? DefaultGradeScaleIndex;
 
         /// <summary>
         /// A list of the updated (or new) items since the last successful sync.
