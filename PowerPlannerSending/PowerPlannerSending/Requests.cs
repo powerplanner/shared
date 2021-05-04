@@ -73,6 +73,13 @@ namespace PowerPlannerSending
         public int DeviceId;
         [DataMember]
         public string Session;
+        [DataMember]
+        public SyncedSettings Settings;
+        /// <summary>
+        /// You must store this on the device and send it up with each sync. This allows the server to only send down a new grade scale if it actually changed.
+        /// </summary>
+        [DataMember]
+        public long DefaultGradeScaleIndex;
     }
 
     [DataContract]
