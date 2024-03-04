@@ -489,6 +489,9 @@ namespace PowerPlannerSending
 
         [DataMember]
         public IEnumerable<ListItemMegaItem> MegaItems { get; set; }
+
+        [DataMember]
+        public Guid SemesterIdentifier { get; set; }
     }
 
 
