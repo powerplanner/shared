@@ -143,6 +143,12 @@ namespace PowerPlannerSending
     {
         [DataMember]
         public string Email;
+
+        /// <summary>
+        /// If true, means that the user's email has been verified through the confirmation email. Otherwise, means the user hasn't yet verified their email.
+        /// </summary>
+        [DataMember]
+        public bool EmailVerified;
     }
 
     [DataContract]
