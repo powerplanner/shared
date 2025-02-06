@@ -1106,4 +1106,30 @@ namespace PowerPlannerSending
         [DataMember]
         public bool ShouldSuggest { get; set; }
     }
+
+    public class PastDeletedItem
+    {
+        public Guid Identifier { get; set; }
+        public ItemType ItemType { get; set; }
+        public string Name { get; set; }
+        public int ChangeNumber { get; set; }
+        public DateTime Updated { get; set; }
+        public DateTime DateCreated { get; set; }
+        public int CountOfChildren { get; set; }
+        public string ChildrenPreview { get; set; }
+    }
+
+    [DataContract]
+    public class GetDeletedYearsAndSemestersResponse : PlainResponse
+    {
+        [DataMember]
+        public PastDeletedItem[] DeletedItems { get; set; }
+    }
+
+    [DataContract]
+    public class GetDeletedClassesResponse : PlainResponse
+    {
+        [DataMember]
+        public PastDeletedItem[] DeletedItems { get; set; }
+    }
 }
