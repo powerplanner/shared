@@ -811,6 +811,12 @@ namespace PowerPlannerSending
         /// </summary>
         [DataMember]
         public bool? DefaultDoesAverageGradeTotals;
+
+        /// <summary>
+        /// Added on 1/6/2026. If null, then ignored/not set. Set to empty array when syncing to clear custom NoClassColor. Set to a 3-byte array to configure a custom color. Max length 3 bytes.
+        /// </summary>
+        [DataMember]
+        public byte[] NoClassColor;
     }
 
     [DataContract]
