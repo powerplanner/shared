@@ -817,6 +817,13 @@ namespace PowerPlannerSending
         /// </summary>
         [DataMember]
         public byte[] NoClassColor;
+
+        /// <summary>
+        /// Added on 4/6/2026. If null, then ignored/not set.
+        /// User's primary theme color (RGB byte array).
+        /// </summary>
+        [DataMember]
+        public byte[] PrimaryThemeColor;
     }
 
     [DataContract]
