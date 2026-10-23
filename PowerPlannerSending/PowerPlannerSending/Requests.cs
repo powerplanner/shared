@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Runtime.Serialization;
 using System.Text;
+using System.Text.Json.Serialization;
 using ToolsPortable;
 
 namespace PowerPlannerSending
@@ -1144,5 +1145,19 @@ namespace PowerPlannerSending
     {
         [DataMember]
         public PastDeletedItem[] DeletedItems { get; set; }
+    }
+
+    public class VEvent
+    {
+        [JsonPropertyName("EXDATE")]
+        public DateOnly[] ExcludedDates { get; set; } = [];
+
+        public VEvent Clone()
+        {
+            return new VEvent()
+            {
+                ExcludedDates = ExcludedDates.ToArray()
+            };
+        }
     }
 }
