@@ -1405,4 +1405,12 @@ namespace PowerPlannerSending
         [DataMember]
         public List<Teacher> Teachers;
     }
+    
+    public enum Priority
+    {
+        // Do NOT change these numeric values, CompareTo is based on it
+        Normal = 0,
+        High = -1,
+        Low = 1
+    }
 }
