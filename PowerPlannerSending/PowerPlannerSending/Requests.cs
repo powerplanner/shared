@@ -1141,6 +1141,13 @@ namespace PowerPlannerSending
     }
 
     [DataContract]
+    public class GetDeletedClassesRequest : PartialLoginRequest
+    {
+        [DataMember]
+        public Guid SemesterIdentifier { get; set; }
+    }
+
+    [DataContract]
     public class GetDeletedClassesResponse : PlainResponse
     {
         [DataMember]
